@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main">
+    <form>
+        <p class="newpara"> FORM FILLING</p>
+        <label for="Firstname">Enter the Firstname</label>
+        <input class="fname" name="fname" id="Firstname" type="text" required placeholder="fname">
+        <br>
+        <br>
+        <label for="Lastname">Enter the Lastname</label>
+        <input class="lname" name="lname" id="Lastname" type="text" required placeholder="Lname">
+        <br>
+        <br>
+        <label for="Address">Enter the Address</label>
+        <input class="address" name="Address" id="Address" type="text" required placeholder="Address">
+        <br>
+        <br>
+        <p class="para1">Choice of food(Any two)</p>
+        
+        <div class="newmain">
+            <p class="type1">Dosa</p>
+            <input class="type1" id="type1"  type="checkbox" value="dosa" name="food">
+            <p class="type1">Idly</p>
+            <input type="checkbox" id="type2" class="type" value="Idly"  name="food">
+            <p class="type1">Poori</p>
+            <input type="checkbox" id="type3" class="type" value="Poori"  name="food">
+            <p class="type1">Pongal</p>
+            <input type="checkbox" id="type4" class="type" value="Pongal"  name="food">
+        </div>
+        <br>
+        <div class="country"> 
+            <Label>Choose the country</Label>
+            <select class="king" id="king1">
+                <option value="india">india</option>
+                <option value="others">others</option>
+            </select>
+        </div>
+        <br>
+        <div class="state"> 
+            <Label>Choose the state</Label>
+            <select class="king" id="state">
+                <option value="Tamilnadu">Tamilnadu</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Andhra pradesh">Andhra pradesh</option>
+                <option value="Kerala">Kerala</option>
+                <option value="Telengana">Telengana</option>
+                <option value="others">others</option>
+            </select>
+            <button style="display:block" class="but" type="submit" >Submit</button>
+            <p>view table <a href="./index1.html" target="blank">table</a></p>
+        </div>
+    </form>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
