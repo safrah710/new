@@ -3,17 +3,17 @@ import React from 'react'
 function Testimonials() {
     let data2=[
         {
-            img:"../public/img/testimonials-1.jpg",
+            img:"../testimonials-1.jpg",
             name:"Nasreen",
             description:"This is fantastic! Thanks so much guys"
         },
         {
-            img:"../public/img/testimonials-2.jpg",
+            img:"../testimonials-2.jpg",
             name:"kumar",
             description:"Bootstrap is amazing. I have been using it to create lots of super nice landing pages"
         },
         {
-            img:"../public/img/testimonials-3.jpg",
+            img:"../testimonials-3.jpg",
             name:"john",
             description:"Thanks so much for making these free resources available to us"
         }
