@@ -1,0 +1,61 @@
+.input1,.input2{
+  width:400px;
+  border:1px solid grey;
+  border-radius:5px;
+  margin:50px;
+  height:40px;
+}
+.input2{
+  margin-left:20px;
+}
+.input1{
+  margin-left:50px;
+}
+h6{
+  margin-left:500px;
+  
+}
+.input1:hover{
+border:2px solid green;
+}
+.input2:hover{
+  border:2px solid green;
+}
+.box{
+  margin:50px;
+  padding-left:30px;
+}
+.todobox{
+  padding:10px 10px 0px 20px;
+  margin-left:40px;
+  background-color: rgb(0, 128, 0,0.5);
+  border-radius:10px;
+  margin-bottom: 10px;
+  
+}
+.todobox p{
+  word-wrap: break-word;
+}
+select{
+  display:block;
+  margin-bottom:20px;
+}
+.btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px; 
+  margin-top: 10px; 
+}
+.main{
+  padding:50px;
+  display:flex;
+  flex-wrap: wrap;
+  height:300px;
+  width:1100px;
+  overflow: auto;
+  margin-left:100px;
+}
+.select{
+  border:none;
+  border-radius: 10px;;
+}
