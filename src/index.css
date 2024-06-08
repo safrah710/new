@@ -1,0 +1,42 @@
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 1200;
+    padding: 20px;
+    height:50px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-bottom: 30px;
+}
+
+.card-container {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.para {
+    font-size: 20px;
+    text-align: center;
+    font-family: fantasy;
+}
+
+* {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+.link {
+    color:inherit;
+    text-decoration: none;
+  }
+  
+  .link:hover, 
+  .link:active, 
+  .link:focus, 
+  .link:visited {
+    color:inherit;
+    text-decoration: none;
+  }
+  
