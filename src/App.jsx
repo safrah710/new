@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+// App.jsx
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Intr from './Intro';
 import Add from './Add-tocart';
@@ -12,15 +13,22 @@ function App() {
     { ind: 4, name: "new4", price1: 800, price2: 700 },
     { ind: 5, name: "new5", price1: 900, price2: 800 }
   ];
+
   const [arr, setArr] = useState([]);
   let [id, setId] = useState(-1);
-  let [amount,setamount]=useState(0);
-  let [quan,setquan]=useState(1);
+  let [amount, setamount] = useState(0);
+  let [tot, settot] = useState([]);
+
+  useEffect(() => {
+    let newarr1 = new Array(data.length).fill(0);
+    settot(newarr1);
+  }, [data.length]);
+
   return (
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Intr data={data} id={id} setId={setId} />} />
-        <Route path='/cart' element={<Add data={data} id={id} setId={setId} arr={arr} setArr={setArr} amount={amount} setamount={setamount} quan={quan} setquan={setquan} />} />
+        <Route path='/cart' element={<Add data={data} id={id} setId={setId} arr={arr} setArr={setArr} amount={amount} setamount={setamount} tot={tot} settot={settot} />} />
       </Routes>
     </BrowserRouter>
   );
