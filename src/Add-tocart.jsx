@@ -1,12 +1,13 @@
-// add-tocart.jsx
-import React, { useEffect } from 'react';
+import React, { useEffect,useContext } from 'react';
 import Button from 'react-bootstrap/Button';
-
-function Add({ data, id, setId, arr, setArr, amount, setamount, tot, settot }) {
+import { context1 } from './context';
+import { usercontext } from './App'
+function Add() {
+  const { data, id, setId, tot, settot,arr,setArr } = useContext(usercontext);
+  const { amount, setamount } = useContext(context1);
+  const opt = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   useEffect(() => {
     if (id !== -1) {
-      //const newAmount = amount + data[id].price2;
-      //setamount(newAmount);
       const newItem = {
         ind: data[id].ind,
         name: data[id].name,
@@ -58,11 +59,11 @@ function Add({ data, id, setId, arr, setArr, amount, setamount, tot, settot }) {
                 <select className='box' onChange={(event) => {
                   Total(Number(event.target.value), e.price, e.ind);
                 }}>
-                   <option value='0'>0</option>
-                  <option value='1'>1</option>
-                  <option value='2'>2</option>
-                  <option value='3'>3</option>
-                  <option value='4'>4</option>
+                  {
+                    opt.map((k,i)=>(
+                      <option value={k} key={i}>{k}</option>
+                    ))
+                  }
                 </select>
               </td>
               <td>{tot[e.ind]}</td>
@@ -84,3 +85,6 @@ function Add({ data, id, setId, arr, setArr, amount, setamount, tot, settot }) {
 }
 
 export default Add;
+
+
+

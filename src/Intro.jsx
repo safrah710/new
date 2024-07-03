@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-
-function Intr({ data, id, setId }) {
+import { usercontext } from './App';
+function Intr() {
   const navigate = useNavigate();
+  const { data, setId } = useContext(usercontext);
   return (
     <>
       <div className="main">

@@ -3,6 +3,8 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Intr from './Intro';
 import Add from './Add-tocart';
+import Context from './context';
+export const usercontext = React.createContext();
 
 function App() {
   let data = [
@@ -25,12 +27,16 @@ function App() {
   }, [data.length]);
 
   return (
-    <BrowserRouter>
+    <usercontext.Provider value={{ data, id, setId, tot, settot,arr,setArr }}>
+      <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Intr data={data} id={id} setId={setId} />} />
-        <Route path='/cart' element={<Add data={data} id={id} setId={setId} arr={arr} setArr={setArr} amount={amount} setamount={setamount} tot={tot} settot={settot} />} />
+        <Route path='/' element={<Intr/>} />
+        <Route path='/cart' element={
+          <Context><Add arr={arr} setArr={setArr}/></Context>} />
       </Routes>
     </BrowserRouter>
+    </usercontext.Provider>
+    
   );
 }
 
